@@ -1,0 +1,25 @@
+{
+    "last_update": "2026-02-07 19:43:14",
+    "insights": {
+        "Poco Tráfico": {
+            "status": "ESTABLE",
+            "score": 0,
+            "message": "Tendencia estable detectada en las últimas 24h."
+        },
+        "Baja Conversión": {
+            "status": "ESTABLE",
+            "score": 30,
+            "message": "Tendencia estable detectada en las últimas 24h."
+        },
+        "Competencia": {
+            "status": "ESTABLE",
+            "score": 23,
+            "message": "Tendencia estable detectada en las últimas 24h."
+        },
+        "Técnico": {
+            "status": "ESTABLE",
+            "score": 0,
+            "message": "Tendencia estable detectada en las últimas 24h."
+        }
+    }
+}
