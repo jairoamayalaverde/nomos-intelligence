@@ -3,23 +3,29 @@ name: Actualizar NOMOS Brain
 on:
   schedule:
     - cron: '0 0 * * *' # Se ejecuta cada medianoche
-  workflow_dispatch: # Permite ejecutarlo manualmente para probar
+  workflow_dispatch: # Permite ejecución manual desde el botón
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Necesitamos permisos explícitos de escritura
+    permissions:
+      contents: write
+      
     steps:
       - name: Checkout código
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Descarga todo el historial para evitar conflictos de push
 
       - name: Configurar Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
       - name: Instalar dependencias
         run: |
-          pip install pytrends
+          pip install pytrends requests
 
       - name: Ejecutar NOMOS Trends
         run: python nomos_trends.py
@@ -28,6 +34,9 @@ jobs:
         run: |
           git config --global user.name 'NOMOS-Bot'
           git config --global user.email 'bot@jairoamaya.co'
+          # El rebase asegura que si editaste el script, el JSON se guarde encima sin errores
+          git pull --rebase origin main
           git add nomos_intelligence.json
+          # Si no hay cambios en el JSON, no falla
           git commit -m "Update NOMOS Intelligence Brain" || exit 0
-          git push
+          git push origin main
