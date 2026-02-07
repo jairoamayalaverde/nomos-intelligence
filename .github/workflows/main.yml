@@ -2,21 +2,22 @@ name: Actualizar NOMOS Brain
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Se ejecuta cada medianoche
-  workflow_dispatch: # Permite ejecución manual desde el botón
+    - cron: '0 0 * * *' # Ejecución automática cada medianoche
+  workflow_dispatch: # Permite la ejecución manual desde el botón "Run workflow"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Necesitamos permisos explícitos de escritura
+    
+    # Otorgamos permisos explícitos de escritura para que el bot pueda subir el JSON
     permissions:
       contents: write
       
     steps:
       - name: Checkout código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Descarga todo el historial para evitar conflictos de push
+          fetch-depth: 0 # Descarga todo el historial para evitar conflictos al hacer push
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -34,9 +35,9 @@ jobs:
         run: |
           git config --global user.name 'NOMOS-Bot'
           git config --global user.email 'bot@jairoamaya.co'
-          # El rebase asegura que si editaste el script, el JSON se guarde encima sin errores
+          # Sincronizamos cambios remotos antes de subir el nuevo archivo
           git pull --rebase origin main
           git add nomos_intelligence.json
-          # Si no hay cambios en el JSON, no falla
+          # Si no hay cambios reales en los datos, el proceso no fallará
           git commit -m "Update NOMOS Intelligence Brain" || exit 0
           git push origin main
