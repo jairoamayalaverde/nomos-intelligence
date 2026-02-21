@@ -1,9 +1,9 @@
 {
-    "last_update": "2026-02-20 02:43:04",
+    "last_update": "2026-02-21 02:36:32",
     "insights": {
         "Poco Tráfico": {
             "status": "ESTABLE",
-            "score": 0,
+            "score": 25,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
@@ -15,13 +15,13 @@
         },
         "Competencia": {
             "status": "ESTABLE",
-            "score": 0,
+            "score": 40,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
         "Técnico": {
             "status": "ESTABLE",
-            "score": 25,
+            "score": 0,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         }
