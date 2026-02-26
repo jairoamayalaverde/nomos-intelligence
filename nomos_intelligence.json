@@ -1,5 +1,5 @@
 {
-    "last_update": "2026-02-25 02:47:58",
+    "last_update": "2026-02-26 02:42:58",
     "insights": {
         "Poco Tráfico": {
             "status": "ESTABLE",
@@ -15,7 +15,7 @@
         },
         "Competencia": {
             "status": "ESTABLE",
-            "score": 36,
+            "score": 25,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
