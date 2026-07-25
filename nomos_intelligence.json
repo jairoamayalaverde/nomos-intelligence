@@ -1,9 +1,9 @@
 {
-    "last_update": "2026-07-24 03:25:46",
+    "last_update": "2026-07-25 03:23:35",
     "insights": {
         "Poco Tráfico": {
             "status": "ESTABLE",
-            "score": 25,
+            "score": 0,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
@@ -21,7 +21,7 @@
         },
         "Técnico": {
             "status": "ESTABLE",
-            "score": 0,
+            "score": 25,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         }
