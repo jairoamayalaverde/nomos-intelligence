@@ -1,5 +1,5 @@
 {
-    "last_update": "2026-08-16 01:46:09",
+    "last_update": "2026-08-17 01:43:41",
     "insights": {
         "Poco Tráfico": {
             "status": "ESTABLE",
@@ -9,13 +9,13 @@
         },
         "Baja Conversión": {
             "status": "ESTABLE",
-            "score": 11,
+            "score": 0,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
         "Competencia": {
             "status": "ESTABLE",
-            "score": 50,
+            "score": 0,
             "reddit_voice": "El mercado está debatiendo nuevas soluciones estratégicas en este momento.",
             "message": "Tendencia activa detectada en las últimas 24h."
         },
